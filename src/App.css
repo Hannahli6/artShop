@@ -33,11 +33,13 @@ a, span{
   font-size: 16px;
 }
 section {
-  height: 100vh;
+  min-height: 100vh;
+  padding: 120px 15px 120px 15px;
 }
 
 #landing{
   background-color: #C6CEF6;
+  padding: 0;
 }
 
 .landing-content{
@@ -51,6 +53,7 @@ section {
   width: 190px;
   height: 190px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .landing-btn{
@@ -59,3 +62,56 @@ section {
   border-radius: 21px;
 }
 
+/* Newest Section */
+
+#newest{
+  background-color: #FCFCFF;
+}
+#newest h2{
+  margin-bottom: 50px;
+}
+.new-item{
+  background-color: #D1CBFF;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 30px 18px;
+  margin-bottom: 25px;
+  height: 330px;
+}
+.new-item img{
+  width: 55%;
+  max-height: 300px;
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 10px;
+}
+.new-item-content{
+  text-align: left;
+  position: relative;
+}
+.new-item-content button{
+  background-color: #8C85DC;
+  color: #FCFCFF;
+  position: absolute;
+  bottom: 0;
+  padding: 15px 30px;
+  border-radius: 7px;
+}
+.new-item-content h3{ 
+  margin-bottom: 20px;
+}
+
+.new-item-collection{
+  text-align: left;
+}
+.new-item-collection button{
+  background-color: transparent;
+}
+.new-item-collection img{
+  object-fit: cover;
+  width: 100%;
+  height: 170px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
