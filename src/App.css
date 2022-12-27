@@ -1,5 +1,61 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.App,body{
   text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  color: #574F85;
+}
+button{
+  font-family: inherit;
+  font-weight: bold;
+  color: #574F85;
+  font-size: 16px;
+  border-style: none;
 }
 
+h1{
+  font-size: 34px;
+}
+h2{
+  font-size: 28px;
+}
+h3{
+  font-size: 20px;
+}
+a, span{
+  font-size: 16px;
+}
+section {
+  height: 100vh;
+}
+
+#landing{
+  background-color: #C6CEF6;
+}
+
+.landing-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shop-profile-img{
+  margin: 50px 0 50px 0;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+}
+
+.landing-btn{
+  background-color: #FCFCFF;
+  padding: 15px 38px;
+  border-radius: 21px;
+}
 
