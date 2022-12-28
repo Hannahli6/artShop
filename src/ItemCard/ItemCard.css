@@ -1,0 +1,24 @@
+.item-card{
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto 25px auto;
+}
+
+.item-card button{
+  background-color: transparent;
+}
+.item-card img{
+  object-fit: cover;
+  width: 100%;
+  min-height: 170px;
+  max-height: 250px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+a{
+  font-size: 18px;
+}
+
+.item-card span{
+  display: block;
+}

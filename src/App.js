@@ -1,11 +1,13 @@
 import "./App.css";
 import shopProfile from "./assets/shopProfile.png";
+import Footer from "./Footer";
+import ItemCard from "./ItemCard";
 import Navbar from "./Navbar";
+
 
 function App() {
   return (
     <div className="App">
-    
       <section id="landing">
         <Navbar />
         <div className="landing-content">
@@ -38,6 +40,57 @@ function App() {
           <button>View More</button>
         </div>
       </section>
+
+      <section id="most-popular">
+        <h2>Most Popular</h2>
+        {/* add array map loop here!! */}
+        <ItemCard
+          name={"Pastel Girl T-Shirt"}
+          price={26}
+          imgSrc={shopProfile}
+        />
+        <ItemCard
+          name={"Pastel Girl T-Shirt"}
+          price={26}
+          imgSrc={shopProfile}
+        />
+        <ItemCard
+          name={"Pastel Girl T-Shirt"}
+          price={26}
+          imgSrc={shopProfile}
+        />
+      </section>
+
+      <section id="collection">
+        <h2>Collection</h2>
+        <div className="collection-container">
+          <div className="col-1 col">
+            <img src={shopProfile} alt="" />
+            <a href={`/`}>Prints</a>
+          </div>
+          <div className="col-2 col">
+            <div className="group">
+              <div className="col">
+                <img src={shopProfile} alt="" />
+                <a href={`/`}>Tote Bags</a>
+              </div>
+              <div className="col">
+                <img src={shopProfile} alt="" />
+                <a href={`/`}>Stickers</a>
+              </div>
+            </div>
+          </div>
+          <div className="col-3 col">
+            <div className="col-1 col">
+              <img src={shopProfile} alt="" />
+              <a href={`/`}>Prints</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer/>
+      
     </div>
   );
 }
