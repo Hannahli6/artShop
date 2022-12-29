@@ -2,12 +2,16 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import CollectionPage from "./Pages/CollectionPage";
 import HomePage from "./Pages/HomePage.js/index.js";
+import PrintsPage from "./Pages/PrintsPage.js/index.js";
+import ProductPage from "./Pages/ProductPage.js";
 
 function App() {
   return (
     <Router>
       <Routes>
+        <Route path='prints' element={<PrintsPage/>}/>
         <Route path="collection" element={<CollectionPage/>}/>
+        <Route path="product" element={<ProductPage/>}/>
         <Route path='/' element={<HomePage/>}/>
       </Routes>
     </Router>

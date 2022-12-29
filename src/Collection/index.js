@@ -1,15 +1,20 @@
+import { Outlet, Link } from "react-router-dom";
 import "./Collection.css";
 import shopProfile from "../assets/shopProfile.png";
 
-function Collection({backgroundColor}) {
+function Collection({ backgroundColor }) {
   return (
-    <section id="collection" style={{backgroundColor: backgroundColor}}>
+    <section id="collection" style={{ backgroundColor: backgroundColor }}>
       <h2>Collection</h2>
+
       <div className="collection-container">
         <div className="col-1 col">
-          <img src={shopProfile} alt="" />
-          <span>Prints</span>
+          <Link to={`/prints`}>
+            <img src={shopProfile} alt="" />
+          </Link>
+          <Link to={`/prints`}>Prints</Link>
         </div>
+
         <div className="col-2 col">
           <div className="group">
             <div className="col">

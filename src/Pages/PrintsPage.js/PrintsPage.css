@@ -1,0 +1,10 @@
+#prints-page{
+  background-image: url("../../assets/grid-background.png");
+}
+.prints-container{
+  display: flex;
+  max-width: 800px;
+  margin: auto;
+  flex-wrap: wrap;
+  
+}

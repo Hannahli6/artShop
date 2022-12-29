@@ -35,9 +35,7 @@ section {
   background-image: url('../../assets/grid-background.png');
   background-repeat: none;
 }
-#newest h2{
-  margin-bottom: 50px;
-}
+
 .new-item{
   background-color: #D1CBFF;
   display: flex;
