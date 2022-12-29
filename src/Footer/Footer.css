@@ -25,7 +25,7 @@
   padding-left: 30px;
   justify-content: center;
 }
-.footer-links a{
+.footer-links span{
   font-size: 16px;
   white-space: nowrap;
   color: #DD6E80;

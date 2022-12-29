@@ -1,17 +1,18 @@
 import "./Navbar.css";
+import { Outlet, Link } from "react-router-dom";
 import { useState } from "react";
 
-function Navbar() {
+function Navbar({backgroundColor}) {
   const [isActive, setActive] = useState("false");
   const ToggleClass = () => {
     setActive(!isActive);
   };
-  const links = ["Home", "Collection", "About Me", "Cart"];
+  const links = [{name: "Home", path: ""},{name: "Collection", path: "collection"},{name: "About Me", path: "about-me"},{name: "Cart" , path: "cart"}];
   return (
-    <nav className="navbar">
-      <a href={`/`} className="nav-logo">
+    <nav className="navbar" style={{backgroundColor: backgroundColor}}>
+      <span className="nav-logo">
         H
-      </a>
+      </span>
       <ul
         className={`nav-menu ${isActive ? "active" : ""}`}
         onClick={ToggleClass}
@@ -19,9 +20,7 @@ function Navbar() {
         {links.map((link, index) => {
           return (
             <li className="nav-item" key={index}>
-              <a href={`/`} className="nav-link" >
-                {link}
-              </a>
+            <Link to={`/${link.path}`} className="nav-link">{link.name}</Link>
             </li>
           );
         })}
