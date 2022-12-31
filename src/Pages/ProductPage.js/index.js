@@ -35,6 +35,64 @@ const ProductPage = () => {
               October 2022.
             </span>
           </div>
+          <div className="review">
+            <div className="review-cards-container">
+              <div className="review-card">
+                <div className="review-profile-container">
+                  <div className="review-name-container">
+                    <div className="review-profile-img"></div>
+                    {/* <img src="" alt=""></img> */}
+                    <span>Hannah Li</span>
+                  </div>
+                  <div className="review-rating">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div>
+                  <span>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer{" "}
+                  </span>
+                </div>
+              </div>
+              <div className="review-card">
+                <div className="review-profile-container">
+                  <div className="review-name-container">
+                    <div className="review-profile-img"></div>
+                    {/* <img src="" alt=""></img> */}
+                    <span>Hannah Li</span>
+                  </div>
+                  <div className="review-rating">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div>
+                  <span>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer{" "}
+                  </span>
+                </div>
+              </div>
+              <div className="review-card">
+                <div className="review-profile-container">
+                  <div className="review-name-container">
+                    <div className="review-profile-img"></div>
+                    {/* <img src="" alt=""></img> */}
+                    <span>Hannah Li</span>
+                  </div>
+                  <div className="review-rating">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div>
+                  <span>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer{" "}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <Footer backgroundColor={lightPurple} iconColor={darkerPurple} />

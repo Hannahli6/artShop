@@ -3,7 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 import { useState } from "react";
 
 function Navbar({backgroundColor}) {
-  const [isActive, setActive] = useState("false");
+  const [isActive, setActive] = useState(false);
   const ToggleClass = () => {
     setActive(!isActive);
   };
