@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./HomePage.css";
 import shopProfile from "../../assets/shopProfile.png";
+import landingBG from "../../assets/landingBG.png";
 import Footer from "../../Footer";
 import ItemCard from "../../ItemCard";
 import Navbar from "../../Navbar";
@@ -11,7 +12,17 @@ const HomePage = () => {
     <div>
       <Navbar />
       <section id="landing">
-        <div className="landing-content">
+        <div className="landing-desktop">
+          <div className="landing-content-desktop">
+            <div className="landing-title">
+              <h1>ArtnHannah</h1>
+              <h3>Shop</h3>
+              <h3>700+ sales</h3>
+            </div>
+          </div>
+          <img src={landingBG} alt=""></img>
+        </div>
+        <div className="landing-content-mobile">
           <div className="landing-title">
             <h1>ArtnHannah</h1>
             <h3>Shop</h3>
@@ -64,8 +75,8 @@ const HomePage = () => {
         />
       </section>
 
-      <Collection/>
-      
+      <Collection />
+
       <Footer />
     </div>
   );
