@@ -10,15 +10,7 @@
   background-position: center;
 
 }
-.socials-links .icon{
-  width: 20px;
-  height: 20px;
-  background-color: #DD6E80;
-  border-radius: 20px;
-  padding: 10px;
-  color: white;
-  margin: 10px;
-}
+
 .footer-links{
   margin: 20px 0;
   display: flex;
