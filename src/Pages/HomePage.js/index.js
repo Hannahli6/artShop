@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./HomePage.css";
 import shopProfile from "../../assets/shopProfile.png";
-import landingBG from "../../assets/landingBG.png";
+import landingBG from "../../assets/landingBg.png";
 import Footer from "../../Footer";
 import ItemCard from "../../ItemCard";
 import Navbar from "../../Navbar";
@@ -16,21 +16,24 @@ const HomePage = () => {
           <div className="landing-content-desktop">
             <div className="landing-title">
               <h1>ArtnHannah</h1>
-              <h3>Shop</h3>
+              <h3>Art Shop</h3>
               <h3>700+ sales</h3>
             </div>
+            <button className="landing-btn">
+              <Link to="collection">shop now</Link>
+            </button>
           </div>
           <img src={landingBG} alt=""></img>
         </div>
         <div className="landing-content-mobile">
           <div className="landing-title">
             <h1>ArtnHannah</h1>
-            <h3>Shop</h3>
+            <h3>Art Shop</h3>
             <h3>700+ sales</h3>
           </div>
           <img src={shopProfile} alt="" className="shop-profile-img"></img>
           <button className="landing-btn">
-            <Link to="collection">Home</Link>
+            <Link to="collection">shop now</Link>
           </button>
         </div>
       </section>

@@ -25,7 +25,7 @@ section {
 .landing-btn {
   background-color: #fcfcff;
   padding: 15px 38px;
-  border-radius: 21px;
+  border-radius: 15px;
 }
 
 /* Newest Section */
@@ -109,12 +109,43 @@ section {
     justify-content: end;
     width: 100%;
   }
-  .landing-content-mobile{
+  .landing-content-mobile {
     display: none;
   }
-  .landing-content-desktop{
+  .landing-content-desktop {
     position: absolute;
-    left: 20%;
-    top: 15%;
+    left: 15%;
+    top: 25%;
+    text-align: left;
+  }
+  .landing-desktop img {
+    display: block;
+    margin-left: auto;
+    width: 63%;
+    height: 75vh;
+    object-fit: cover;
+    object-position: 25% 37%;
+  }
+  .landing-title {
+    text-align: left;
+  }
+  .landing-title h1{
+    font-size: 2.5vw;
+  }
+  .landing-title h3{
+    font-size: 1.5vw;
+    
+  }
+  .landing-btn {
+    display: block;
+    width: 70%;
+    padding: 5% 11%;
+    margin-top: 20%;
+    background-color: #8c85dc;
+    text-align: center;
+  }
+  .landing-btn a {
+    color: #fcfcff;
+    font-size: 1.0vw;
   }
 }
