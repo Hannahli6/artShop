@@ -91,7 +91,16 @@ section {
 #most-popular {
   background-color: #c6cef6;
 }
-
+.popular-product-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.popular-product-container .item-card{
+  width: 100%;
+  max-width: none;
+  margin: 0 0 25px 0;
+}
 #most-popular h2 {
   margin-bottom: 50px;
 }
@@ -147,5 +156,16 @@ section {
   .landing-btn a {
     color: #fcfcff;
     font-size: 1.0vw;
+  }
+  /* most popular */
+  .popular-product-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .popular-product-container .item-card{
+    width: auto;
+    text-align: left;
+    margin: 0 25px 25px 25px;
   }
 }

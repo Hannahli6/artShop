@@ -61,21 +61,24 @@ const HomePage = () => {
       <section id="most-popular">
         <h2>Most Popular</h2>
         {/* add array map loop here!! */}
-        <ItemCard
-          name={"Pastel Girl T-Shirt"}
-          price={26}
-          imgSrc={`shopProfile.png`}
-        />
-        <ItemCard
-          name={"Pastel Girl T-Shirt"}
-          price={26}
-          imgSrc={`shopProfile.png`}
-        />
-        <ItemCard
-          name={"Pastel Girl T-Shirt"}
-          price={26}
-          imgSrc={`shopProfile.png`}
-        />
+        <div className="popular-product-container">
+          <ItemCard
+            size="large"
+            name={"Pastel Girl T-Shirt"}
+            price={26}
+            imgSrc={`shopProfile.png`}
+          />
+          <ItemCard
+            name={"Pastel Girl T-Shirt"}
+            price={26}
+            imgSrc={`shopProfile.png`}
+          />
+          <ItemCard
+            name={"Pastel Girl T-Shirt"}
+            price={26}
+            imgSrc={`shopProfile.png`}
+          />
+        </div>
       </section>
 
       <Collection />
