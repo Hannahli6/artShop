@@ -5,9 +5,9 @@ function ItemCard({ name, price, imgSrc, productId, size, description , type}) {
   return (
     <div
       className="item-card"
-      style={size === "small" ? { minWidth: "170px" } : null}
+      style={size === "small" ? { maxWidth: "280px" } : null}
     >
-      <img src={imgSrc} alt=""></img>
+      <img src={require(`../assets/${imgSrc}`)} alt=""></img>
       <div>
         <Link
           to={{ pathname: `/collection/${productId}` }}

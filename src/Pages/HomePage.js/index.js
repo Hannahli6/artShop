@@ -64,17 +64,17 @@ const HomePage = () => {
         <ItemCard
           name={"Pastel Girl T-Shirt"}
           price={26}
-          imgSrc={shopProfile}
+          imgSrc={`shopProfile.png`}
         />
         <ItemCard
           name={"Pastel Girl T-Shirt"}
           price={26}
-          imgSrc={shopProfile}
+          imgSrc={`shopProfile.png`}
         />
         <ItemCard
           name={"Pastel Girl T-Shirt"}
           price={26}
-          imgSrc={shopProfile}
+          imgSrc={`shopProfile.png`}
         />
       </section>
 

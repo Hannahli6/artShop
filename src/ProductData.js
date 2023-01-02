@@ -6,13 +6,50 @@ const ProductData = [
         name: "cat print",
         productId: "cat-print",
         price: "20",
-        description: "this is a cat print!"
+        description: "this is a cat print!",
+        imgSrc: "landingBg.png"
       },
       {
         name: "dog print",
         productId: "dog-print",
         price: "30",
-        description: "this is a dog print!"
+        description: "this is a dog print!",
+        imgSrc: "footer-background.png"
+      },
+      {
+        name: "dog print",
+        productId: "dog-print",
+        price: "30",
+        description: "this is a dog print!",
+        imgSrc: "landingBg.png"
+      },
+      {
+        name: "dog print",
+        productId: "dog-print",
+        price: "30",
+        description: "this is a dog print!",
+        imgSrc: "landingBg.png"
+      },
+      {
+        name: "dog print",
+        productId: "dog-print",
+        price: "30",
+        description: "this is a dog print!",
+        imgSrc: "landingBg.png"
+      },
+      {
+        name: "dog print",
+        productId: "dog-print",
+        price: "30",
+        description: "this is a dog print!",
+        imgSrc: "landingBg.png"
+      },
+      {
+        name: "dog print",
+        productId: "dog-print",
+        price: "30",
+        description: "this is a dog print!",
+        imgSrc: "landingBg.png"
       },
     ],
   },

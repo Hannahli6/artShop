@@ -1,7 +1,6 @@
 import "./ProductPage.css";
 import Navbar from "../../Navbar";
 import Footer from "../../Footer";
-import shopProfile from "../../assets/shopProfile.png";
 import { useLocation, useParams, Link } from "react-router-dom";
 
 
@@ -18,7 +17,7 @@ const ProductPage = () => {
       <section>
         <div className="product-page">
           <div className="product-img-container">
-            <img src={shopProfile} alt=""></img>
+            <img src={require(`../../assets/${imgSrc}`)} alt=""></img>
             <Link to={`/${type}`}>{type}</Link>
           </div>
           <div className="product-content-container">

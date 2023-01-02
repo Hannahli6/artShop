@@ -9,8 +9,7 @@ const PrintsPage = () => {
   const darkerPurple = "#8C85DC";
   const products = ProductData.find((obj) => obj.type === "prints").products;
   const type = ProductData.find((obj) => obj.type === "prints").type;
-  console.log(type);
-
+  
   return (
     <div>
       <Navbar backgroundColor={lightPurple} />
@@ -18,14 +17,16 @@ const PrintsPage = () => {
         <h2>Prints</h2>
         <div className="prints-container">
           {products.map((product, index) => {
+            const {name, price, imgSrc, productId, description} = product;
             return (
               <ItemCard
                 type={type}
                 size="small"
-                price={product.price}
-                name={product.name}
-                productId={product.productId}
-                description={product.description}
+                imgSrc={imgSrc}
+                price={price}
+                name={name}
+                productId={productId}
+                description={description}
                 key={index}
               />
             );

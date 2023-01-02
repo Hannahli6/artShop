@@ -1,7 +1,7 @@
 .item-card{
   text-align: left;
-  max-width: 700px;
-  margin: 0 auto 25px auto;
+  margin: 0 25px 25px 25px;
+  max-width: 330px;
 }
 
 .item-card button{
@@ -10,8 +10,9 @@
 .item-card img{
   object-fit: cover;
   width: 100%;
-  min-height: 170px;
-  max-height: 250px;
+  height: 330px;
+  /* min-height: 170px;
+  max-height: 250px; */
   border-radius: 10px;
   margin-bottom: 10px;
 }
