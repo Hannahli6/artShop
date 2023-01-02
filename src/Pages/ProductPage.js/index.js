@@ -2,11 +2,16 @@ import "./ProductPage.css";
 import Navbar from "../../Navbar";
 import Footer from "../../Footer";
 import shopProfile from "../../assets/shopProfile.png";
+import { useLocation, useParams, Link } from "react-router-dom";
+
 
 const ProductPage = () => {
   const lightPurple = "#CBD3FF";
   const darkerPurple = "#8C85DC";
-
+  const { productId } = useParams ();
+  const state = useLocation();
+  const productState = state.state
+  const { name, price, imgSrc, description, type } = productState
   return (
     <div>
       <Navbar backgroundColor={lightPurple} />
@@ -14,15 +19,14 @@ const ProductPage = () => {
         <div className="product-page">
           <div className="product-img-container">
             <img src={shopProfile} alt=""></img>
-            <span>product</span>
+            <Link to={`/${type}`}>{type}</Link>
           </div>
           <div className="product-content-container">
             <div className="product-desc-container">
-              <h2 className="product-name">Banana Cat Tote Bag</h2>
-              <h3 className="product-price">$19.99 CAD</h3>
+              <h2 className="product-name">{name}</h2>
+              <h3 className="product-price">${price} CAD</h3>
               <span className="product-desc">
-                Cute banana cat tote bag 8 x 10 with flexible strip | with
-                pockets
+                {description}
               </span>
             </div>
             <div className="product-btn-container">

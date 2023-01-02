@@ -12,7 +12,8 @@ function App() {
       <Routes>
         <Route path='prints' element={<PrintsPage/>}/>
         <Route path="collection" element={<CollectionPage/>}/>
-        <Route path="product" element={<ProductPage/>}/>
+        <Route path="collection/:productId" element={<ProductPage/>}/>
+        {/* <Route path="product" element={<ProductPage/>}/> */}
         <Route path="about-me" element={<AboutMePage/>}/>
         <Route path='/' element={<HomePage/>}/>
       </Routes>
