@@ -1,6 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import "./Collection.css";
-import shopProfile from "../assets/shopProfile.png";
+import shopProfile from "../assets/shopProfile.jpg";
 
 function Collection({ backgroundColor }) {
   return (
@@ -18,19 +18,26 @@ function Collection({ backgroundColor }) {
         <div className="col-2 col">
           <div className="group">
             <div className="col">
-              <img src={shopProfile} alt="" />
-              <span>Tote Bag</span>
+              <Link to={`/accessories`}>
+                <img src={shopProfile} alt="" />
+              </Link>
+              <Link to={`/accessories`}>accessories & bags</Link>
             </div>
+
             <div className="col">
-              <img src={shopProfile} alt="" />
-              <span>Stickers</span>
+              <Link to={`/stationary`}>
+                <img src={shopProfile} alt="" />
+              </Link>
+              <Link to={`/stationary`}>stationary</Link>
             </div>
           </div>
         </div>
         <div className="col-3 col">
           <div className="col-1 col">
-            <img src={shopProfile} alt="" />
-            <span>All Items</span>
+            <Link to={`/all-item`}>
+              <img src={shopProfile} alt="" />
+            </Link>
+            <Link to={`/all-item`}>All Items</Link>
           </div>
         </div>
       </div>

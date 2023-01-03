@@ -4,7 +4,9 @@ section {
 }
 
 #landing {
-  background-color: #c6cef6;
+  background-image: url(../../assets/landingBgMobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .landing-content-mobile {
   display: flex;
@@ -46,18 +48,23 @@ section {
   max-width: 700px;
   height: 330px;
 }
-.new-item img {
-  width: 55%;
+.new-item-img-wrapper{
   max-height: 300px;
-  object-fit: cover;
+  width: 50%;
   margin-right: 15px;
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
+}
+.new-item img {
+  height: 100%;
   border-radius: 10px;
 }
 .new-item-content {
   text-align: left;
   position: relative;
 }
-.new-item-content button {
+.new-item-content a {
   background-color: #8c85dc;
   color: #fcfcff;
   position: absolute;
@@ -90,6 +97,7 @@ section {
 
 #most-popular {
   background-color: #c6cef6;
+  align-items: center;
 }
 .popular-product-container{
   display: flex;
@@ -111,6 +119,7 @@ section {
     min-height: 60vh;
     padding: 0;
     background-color: #faf7f7;
+    background-image: none;
   }
   .landing-desktop {
     position: relative;

@@ -39,9 +39,12 @@
   width: 29%;
   position: relative;
   margin: 5px;
+  height: 250px;
 }
 .instagram-card img {
   width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
 .instagram-card .overlay {
   position: absolute;

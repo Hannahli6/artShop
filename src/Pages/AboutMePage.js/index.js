@@ -1,12 +1,35 @@
 import "./AboutMePage.css";
 import Navbar from "../../Navbar";
 import Footer from "../../Footer";
-import shopProfile from "../../assets/shopProfile.png";
+import shopProfile from "../../assets/shopProfile.jpg";
 import SocialMediaBtns from "../../SocialMediaBtns";
 
 const AboutMePage = () => {
   const lightPurple = "#CBD3FF";
   const darkerPurple = "#8C85DC";
+  const INSTAGRAM_IMG_DATA = [
+    {
+      imgScr: "bread.jpg",
+      link: "https://www.instagram.com/p/CgoEuXbuENk/",
+    },
+    {
+      imgScr: "sunset.jpg",
+      link: "https://www.instagram.com/p/CgXvXWIPeWr/",
+    },
+    {
+      imgScr: "boy.jpg",
+      link: "https://www.instagram.com/p/CP9c9vClOcE/",
+    },
+
+    {
+      imgScr: "comm.jpg",
+      link: "https://www.instagram.com/p/CFGWij-lvZs/",
+    },
+    {
+      imgScr: "commission.jpg",
+      link: "https://www.instagram.com/p/CEfHd5BllCQ/",
+    },
+  ];
   return (
     <div>
       <Navbar backgroundColor={lightPurple} />
@@ -22,33 +45,26 @@ const AboutMePage = () => {
             </span>
           </div>
           <img src={shopProfile} alt="" className="about-me-img"></img>
-          <SocialMediaBtns iconColor={darkerPurple}/>
+          <SocialMediaBtns iconColor={darkerPurple} />
         </div>
 
         <span className="instagram-title">
           Follow Me on Instagram @artnhannah
         </span>
         <div className="instagram-img-container">
-          <div className="instagram-card">
-            <img src={shopProfile} alt=""></img>
-            <div className="overlay"></div>
-          </div>
-          <div className="instagram-card">
-            <img src={shopProfile} alt=""></img>
-            <div className="overlay"></div>
-          </div>
-          <div className="instagram-card">
-            <img src={shopProfile} alt=""></img>
-            <div className="overlay"></div>
-          </div>
-          <div className="instagram-card">
-            <img src={shopProfile} alt=""></img>
-            <div className="overlay"></div>
-          </div>
-          <div className="instagram-card">
-            <img src={shopProfile} alt=""></img>
-            <div className="overlay"></div>
-          </div>
+          {INSTAGRAM_IMG_DATA.map((post, index) => {
+            return (
+              <div className="instagram-card" key={index}>
+                <img
+                  src={require(`../../assets/about-me-instagram/${post.imgScr}`)}
+                  alt=""
+                ></img>
+                <a href={post.link}>
+                  <div className="overlay"></div>
+                </a>
+              </div>
+            );
+          })}
         </div>
       </section>
       <Footer backgroundColor={lightPurple} iconColor={darkerPurple} />

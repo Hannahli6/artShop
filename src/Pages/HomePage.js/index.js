@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./HomePage.css";
-import shopProfile from "../../assets/shopProfile.png";
-import landingBG from "../../assets/landingBg.png";
+import shopProfile from "../../assets/shopProfile.jpg";
+import landingBG from "../../assets/landingBg.jpg";
 import Footer from "../../Footer";
 import ItemCard from "../../ItemCard";
 import Navbar from "../../Navbar";
@@ -41,7 +41,9 @@ const HomePage = () => {
       <section id="newest">
         <h2>Newest</h2>
         <div className="new-item">
-          <img src={shopProfile} alt="" />
+          <Link to="" className="new-item-img-wrapper">
+            <img src={shopProfile} alt="" />
+          </Link>
           <div className="new-item-content">
             <div>
               <h3>
@@ -49,12 +51,14 @@ const HomePage = () => {
               </h3>
               <span>$15.99 CAD</span>
             </div>
-            <button>View</button>
+            <Link to="">View</Link>
           </div>
         </div>
         <div className="new-item-collection">
-          <img src={shopProfile} alt=""></img>
-          <button>View More</button>
+          <Link>
+            <img src={shopProfile} alt=""></img>
+          </Link>
+          <Link to="">View More</Link>
         </div>
       </section>
 
@@ -63,20 +67,22 @@ const HomePage = () => {
         {/* add array map loop here!! */}
         <div className="popular-product-container">
           <ItemCard
-            size="large"
+            type={"prints"}
             name={"Pastel Girl T-Shirt"}
             price={26}
-            imgSrc={`shopProfile.png`}
+            imgSrc={`sunset-print.jpg`}
           />
           <ItemCard
             name={"Pastel Girl T-Shirt"}
+            type={"prints"}
             price={26}
-            imgSrc={`shopProfile.png`}
+            imgSrc={`gojo-print.jpg`}
           />
           <ItemCard
             name={"Pastel Girl T-Shirt"}
+            type={"stationary"}
             price={26}
-            imgSrc={`shopProfile.png`}
+            imgSrc={`strawberry-pouch.jpg`}
           />
         </div>
       </section>

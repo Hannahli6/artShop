@@ -17,7 +17,7 @@ const ProductPage = () => {
       <section>
         <div className="product-page">
           <div className="product-img-container">
-            <img src={require(`../../assets/${imgSrc}`)} alt=""></img>
+            <img src={require(`../../assets/${type}/${imgSrc}`)} alt=""></img>
             <Link to={`/${type}`}>{type}</Link>
           </div>
           <div className="product-content-container">

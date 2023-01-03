@@ -1,5 +1,5 @@
 #prints-page{
-  background-image: url("../../assets/grid-background.png");
+  /* background-image: url("../../assets/grid-background.png"); */
 }
 .prints-container{
   display: flex;
