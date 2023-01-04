@@ -24,7 +24,7 @@ const AllProductPage = () => {
     <div>
       <Navbar backgroundColor={lightPurple} />
       <section id="prints-page">
-        <h2>Prints</h2>
+        <h2>All</h2>
         <div className="prints-container">
           {allProducts.map((product, index) => {
             const {name, price, imgSrc, productId, description, type} = product;

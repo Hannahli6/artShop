@@ -39,7 +39,8 @@
   width: 29%;
   position: relative;
   margin: 5px;
-  height: 250px;
+  min-height: 160px;
+  max-height: 250px;
 }
 .instagram-card img {
   width: 100%;
