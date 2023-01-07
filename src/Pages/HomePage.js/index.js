@@ -19,9 +19,7 @@ const HomePage = () => {
               <h3>Art Shop</h3>
               <h3>700+ sales</h3>
             </div>
-            <button className="landing-btn">
-              <Link to="collection">shop now</Link>
-            </button>
+              <Link to="collection" className="landing-btn">shop now</Link>
           </div>
           <img src={landingBG} alt=""></img>
         </div>
@@ -32,9 +30,7 @@ const HomePage = () => {
             <h3>700+ sales</h3>
           </div>
           <img src={shopProfile} alt="" className="shop-profile-img"></img>
-          <button className="landing-btn">
-            <Link to="collection">shop now</Link>
-          </button>
+            <Link to="collection" className="landing-btn">shop now</Link>
         </div>
       </section>
 
@@ -58,7 +54,7 @@ const HomePage = () => {
           <Link>
             <img src={shopProfile} alt=""></img>
           </Link>
-          <Link to="">View More</Link>
+          <Link to="" className="hover-underline-animation">View More</Link>
         </div>
       </section>
 

@@ -38,6 +38,16 @@ a, span{
 a:hover{
   transition: 0.3s;
 }
+img{
+  transition: transform .5s ease;
+}
+.img-zoom-container{
+  overflow: hidden;
+ }
+
+ .img-zoom-container img:hover{
+  transform: scale(1.05);
+ }
 
 ::-webkit-scrollbar {
   width: 15px;
@@ -58,4 +68,29 @@ a:hover{
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #574F85; 
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  /* color: #0087ca; */
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: -3px;
+  left: 0;
+  border-radius: 4px;
+  background-color: #a49cff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

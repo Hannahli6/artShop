@@ -1,5 +1,5 @@
 section {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   padding: 120px 15px 120px 15px;
 }
 
@@ -27,7 +27,7 @@ section {
 .landing-btn {
   background-color: #fcfcff;
   padding: 15px 38px;
-  border-radius: 15px;
+  border-radius: 30px;
 }
 
 /* Newest Section */
@@ -159,9 +159,19 @@ section {
     margin-top: 20%;
     background-color: #8c85dc;
     text-align: center;
-  }
-  .landing-btn a {
     color: #fcfcff;
+    font-size: 1vw;
+    border: #8c85dc solid 2px;
+    /* transition: transform 3s ease; */
+    transition: 0.9s;
+  }
+  .landing-btn:hover{
+    background-color: transparent;
+    border: #8c85dc solid 2px;
+    color: #8c85dc;
+  }
+  .landing-btn a:hover {
+    color: #1f1f6e;
     font-size: 1vw;
   }
   /* most popular */

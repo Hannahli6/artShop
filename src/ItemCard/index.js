@@ -8,18 +8,21 @@ function ItemCard({ name, price, imgSrc, productId, size, description, type }) {
       className="item-card"
       style={size === "small" ? { maxWidth: "280px" } : null}
     >
-      <Link
-        to={{ pathname: `/collection/${productId}` }}
-        state={{
-          name: name,
-          price: price,
-          imgSrc: imgSrc,
-          description: description,
-          type: type,
-        }}
-      >
-        <img src={require(`../assets/${type}/${imgSrc}`)} alt=""></img>
-      </Link>
+      <div className="img-zoom-container">
+        <Link
+          to={{ pathname: `/collection/${productId}` }}
+          state={{
+            name: name,
+            price: price,
+            imgSrc: imgSrc,
+            description: description,
+            type: type,
+          }}
+        >
+          <img src={require(`../assets/${type}/${imgSrc}`)} alt=""></img>
+        </Link>
+      </div>
+
       <div>
         <Link
           to={{ pathname: `/collection/${productId}` }}
@@ -30,6 +33,7 @@ function ItemCard({ name, price, imgSrc, productId, size, description, type }) {
             description: description,
             type: type,
           }}
+          className="hover-underline-animation"
         >
           {name}
         </Link>

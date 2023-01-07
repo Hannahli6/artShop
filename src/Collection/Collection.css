@@ -1,7 +1,8 @@
 
 /* collection */
 #collection{
-  background-color: #F3DBDC;
+  /* background-color: #F3DBDC; */
+  background-image: url("../assets/grid-background.png");
  }
  
  #collection h2{
@@ -26,6 +27,7 @@
    max-height: 330px;
    border-radius: 10px;
    margin-bottom: 10px;
+
  }
  .group{
    display: flex;
@@ -42,3 +44,7 @@
  .col-3 img{
    max-height: 300px;
  }
+
+
+
+ 

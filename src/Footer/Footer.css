@@ -1,7 +1,7 @@
 /* footer */
 
 #footer{
-  background-color: #F3DBDC;
+  background-color: #CBD3FF;
   min-height: 0vh;
   height: 500px;
   background-image: url(../assets/footer-background.png);
@@ -20,7 +20,7 @@
 .footer-links span{
   font-size: 16px;
   white-space: nowrap;
-  color: #DD6E80;
+  color: #8C85DC;
   margin: 0 17px;
 }
 

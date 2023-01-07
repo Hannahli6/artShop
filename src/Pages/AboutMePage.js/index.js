@@ -36,8 +36,8 @@ const AboutMePage = () => {
       <section id="about-me">
         <div className="about-me-content">
           <div className="about-me-desc">
-            <h2>Hello, I’m Hannah!</h2>
-            <h3>Digital Artist</h3>
+            <h2 >Hello, I’m <h2 className="hover-underline-animation">Hannah</h2>!</h2>
+            <h3 className="hover-underline-animation">Digital Artist</h3>
             <span>
               My name is Hannah and I'm a highschool student. I'm currently
               practicing coding! I like to watch anime, bake & draw on my free
@@ -49,7 +49,10 @@ const AboutMePage = () => {
         </div>
 
         <span className="instagram-title">
-          Follow Me on Instagram @artnhannah
+          Follow Me on Instagram{" "}
+          <a href="https://www.instagram.com/artnhannah/" className="hover-underline-animation" target="_blank" rel="noreferrer" alt="">
+            @artnhannah
+          </a>
         </span>
         <div className="instagram-img-container">
           {INSTAGRAM_IMG_DATA.map((post, index) => {
@@ -59,7 +62,7 @@ const AboutMePage = () => {
                   src={require(`../../assets/about-me-instagram/${post.imgScr}`)}
                   alt=""
                 ></img>
-                <a href={post.link}>
+                <a href={post.link} target="_blank" rel="noreferrer">
                   <div className="overlay"></div>
                 </a>
               </div>

@@ -13,7 +13,7 @@ import ScrollToTop from "./ScrollToTop";
 function App() {
   return (
     <Router>
-        <ScrollToTop />
+      <ScrollToTop />
       <Routes>
         <Route path="prints" element={<PrintsPage />} />
         <Route path="stationary" element={<StationaryPage />} />
@@ -21,7 +21,7 @@ function App() {
         <Route path="all-item" element={<AllProductPage />} />
         <Route path="collection" element={<CollectionPage />} />
         <Route path="collection/:productId" element={<ProductPage />} />
-        {/* <Route path="product" element={<ProductPage/>}/> */}
+
         <Route path="about-me" element={<AboutMePage />} />
         <Route path="/" element={<HomePage />} />
       </Routes>
