@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import "./ItemCard.css";
 
 function ItemCard({ name, price, imgSrc, productId, size, description, type }) {
-  console.log(imgSrc);
   return (
     <div
       className="item-card"

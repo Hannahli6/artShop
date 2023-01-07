@@ -2,24 +2,21 @@ import Navbar from "../../Navbar";
 import Footer from "../../Footer";
 import ItemCard from "../../ItemCard";
 import "./AllProductPage.css";
-import {ProductData} from "../../ProductData";
+import { ProductData } from "../../ProductData";
 
 const AllProductPage = () => {
   let allProducts = [];
   const lightPurple = "#CBD3FF";
   const darkerPurple = "#8C85DC";
 
-  ProductData.map((typeProduct)=> {
+  ProductData.map((typeProduct) => {
     let type = typeProduct.type;
-    typeProduct.products.forEach((product)=> {
+    typeProduct.products.forEach((product) => {
       product.type = type;
-    })
-    allProducts = [...allProducts, ...typeProduct.products]
-  })
+    });
+    allProducts = [...allProducts, ...typeProduct.products];
+  });
 
-  console.log(allProducts)
- 
-  
   return (
     <div>
       <Navbar backgroundColor={lightPurple} />
@@ -27,7 +24,8 @@ const AllProductPage = () => {
         <h2>All</h2>
         <div className="prints-container">
           {allProducts.map((product, index) => {
-            const {name, price, imgSrc, productId, description, type} = product;
+            const { name, price, imgSrc, productId, description, type } =
+              product;
             return (
               <ItemCard
                 type={type}

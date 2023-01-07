@@ -1,5 +1,7 @@
 import "./Navbar.css";
-import { Outlet, Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faCartShopping,} from "@fortawesome/free-solid-svg-icons";
+import { Outlet, Link } from "react-router-dom"; 
 import { useState } from "react";
 
 function Navbar({backgroundColor}) {
@@ -7,7 +9,7 @@ function Navbar({backgroundColor}) {
   const ToggleClass = () => {
     setActive(!isActive);
   };
-  const links = [{name: "Home", path: ""},{name: "Collection", path: "collection"},{name: "About Me", path: "about-me"},{name: "Cart" , path: "cart"}];
+  const links = [{name: "Home", path: ""},{name: "Collection", path: "collection"},{name: "About Me", path: "about-me"},{name: "Cart" , path: ""}];
   return (
     <nav className="navbar" style={{backgroundColor: backgroundColor}}>
       <span className="nav-logo">
@@ -18,6 +20,9 @@ function Navbar({backgroundColor}) {
         onClick={ToggleClass}
       >
         {links.map((link, index) => {
+          if(link.name === "Cart"){
+            link.name = <FontAwesomeIcon icon={faCartShopping} />
+          }
           return (
             <li className="nav-item" key={index}>
             <Link to={`/${link.path}`} className="nav-link hover-underline-animation">{link.name}</Link>

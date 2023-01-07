@@ -29,7 +29,7 @@ const ProductPage = () => {
               </span>
             </div>
             <div className="product-btn-container">
-              <button>quntity</button>
+              <button>quantity</button>
               <button>add to cart</button>
             </div>
             <span className="product-delivery-info">

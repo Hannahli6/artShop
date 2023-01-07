@@ -16,7 +16,7 @@ function Footer({ backgroundColor, iconColor }) {
 
       </div>
       <div className="copyright-container">
-        <span>@artnahannah</span>
+        <span>@artnhannah</span>
         <span>copyright2023</span>
       </div>
     </section>

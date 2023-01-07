@@ -41,10 +41,10 @@ const HomePage = () => {
 
       <section id="newest">
         <h2>Newest</h2>
-        {NewestProductData.map((product) => {
+        {NewestProductData.map((product,index) => {
           const { name, price, description, imgSrc, type, productId } = product;
           return (
-            <div>
+            <div key={index}>
               <div className="new-item">
                 <Link
                   to={{ pathname: `/collection/${productId}` }}
@@ -83,7 +83,7 @@ const HomePage = () => {
                   <img src={require(`../../assets/thumbnails/${type}-thumbnail.jpg`)} alt="" />
                 </Link>
                 <Link to={`/${type}`} className="hover-underline-animation">
-                  View More
+                  {type} 
                 </Link>
               </div>
             </div>

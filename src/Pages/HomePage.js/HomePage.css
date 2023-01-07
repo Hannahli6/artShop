@@ -35,7 +35,9 @@ section {
 #newest {
   background-color: #fcfcff;
   background-image: url("../../assets/grid-background.png");
-  background-repeat: none;
+  /* background-repeat: none; */
+  background-size: contain;
+
 }
 
 .new-item {
