@@ -1,9 +1,9 @@
 import { Outlet, Link } from "react-router-dom";
 import "./Collection.css";
-import accessoriesThumbnail from "../assets/accessories-thumbnail.jpg";
-import stationaryThumbnail from "../assets/stationary-thumbnail.jpg";
-import printsThumbnail from "../assets/prints-thumbnail.jpg";
-import allItemThumbnail from "../assets/all-item-thumbnail.jpg";
+import accessoriesThumbnail from "../assets/thumbnails/accessories-thumbnail.jpg";
+import stationaryThumbnail from "../assets/thumbnails/stationary-thumbnail.jpg";
+import printsThumbnail from "../assets/thumbnails/prints-thumbnail.jpg";
+import allItemThumbnail from "../assets/thumbnails/all-item-thumbnail.jpg";
 
 function Collection({ backgroundColor }) {
   return (

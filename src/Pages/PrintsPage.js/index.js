@@ -2,7 +2,7 @@ import Navbar from "../../Navbar";
 import Footer from "../../Footer";
 import ItemCard from "../../ItemCard";
 import "./PrintsPage.css";
-import ProductData from "../../ProductData";
+import {ProductData} from "../../ProductData";
 
 const PrintsPage = () => {
   const lightPurple = "#CBD3FF";

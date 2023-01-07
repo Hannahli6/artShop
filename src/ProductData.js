@@ -1,3 +1,5 @@
+import { type } from "@testing-library/user-event/dist/type";
+
 const ProductData = [
   {
     type: "prints",
@@ -128,4 +130,42 @@ const ProductData = [
   },
 ];
 
-export default ProductData;
+const MostPopularProductData = [
+    {
+      name: "cat print",
+      productId: "cat-print",
+      price: "20",
+      description: "this is a cat print!",
+      imgSrc: "butterfly-print.jpg",
+      type: "prints"
+    },
+    {
+      name: "dog print",
+      productId: "dog-print",
+      price: "30",
+      description: "this is a dog print!",
+      imgSrc: "gojo-print.jpg",
+      type: "prints"
+    },
+    {
+      name: "dog print",
+      productId: "dog-print",
+      price: "30",
+      description: "this is a dog print!",
+      imgSrc: "strawberry-print.jpg",
+      type: "prints"
+    }
+]
+
+const NewestProductData = [
+  {
+    name: "dog sticker",
+    productId: "dog-sticker",
+    price: "30",
+    description: "this is a dog sticker!",
+    imgSrc: "strawberry-mug.jpg",
+    type: "accessories"
+  },
+]
+
+export {ProductData, MostPopularProductData, NewestProductData} ;

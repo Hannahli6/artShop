@@ -6,6 +6,7 @@ import Footer from "../../Footer";
 import ItemCard from "../../ItemCard";
 import Navbar from "../../Navbar";
 import Collection from "../../Collection";
+import { MostPopularProductData, NewestProductData } from "../../ProductData";
 
 const HomePage = () => {
   return (
@@ -19,7 +20,9 @@ const HomePage = () => {
               <h3>Art Shop</h3>
               <h3>700+ sales</h3>
             </div>
-              <Link to="collection" className="landing-btn">shop now</Link>
+            <Link to="collection" className="landing-btn">
+              shop now
+            </Link>
           </div>
           <img src={landingBG} alt=""></img>
         </div>
@@ -30,56 +33,86 @@ const HomePage = () => {
             <h3>700+ sales</h3>
           </div>
           <img src={shopProfile} alt="" className="shop-profile-img"></img>
-            <Link to="collection" className="landing-btn">shop now</Link>
+          <Link to="collection" className="landing-btn">
+            shop now
+          </Link>
         </div>
       </section>
 
       <section id="newest">
         <h2>Newest</h2>
-        <div className="new-item">
-          <Link to="" className="new-item-img-wrapper">
-            <img src={shopProfile} alt="" />
-          </Link>
-          <div className="new-item-content">
+        {NewestProductData.map((product) => {
+          const { name, price, description, imgSrc, type, productId } = product;
+          return (
             <div>
-              <h3>
-                Banana Cat <br /> Tote Bag
-              </h3>
-              <span>$15.99 CAD</span>
+              <div className="new-item">
+                <Link
+                  to={{ pathname: `/collection/${productId}` }}
+                  state={{
+                    name: name,
+                    price: price,
+                    imgSrc: imgSrc,
+                    description: description,
+                    type: type,
+                  }}
+                  className="new-item-img-wrapper img-zoom-container"
+                >
+                  <img src={require(`../../assets/${type}/${imgSrc}`)} alt="" />
+                </Link>
+                <div className="new-item-content">
+                  <div>
+                    <h3>{name}</h3>
+                    <span>$ {price} CAD</span>
+                  </div>
+                  <Link
+                    to={{ pathname: `/collection/${productId}` }}
+                    state={{
+                      name: name,
+                      price: price,
+                      imgSrc: imgSrc,
+                      description: description,
+                      type: type,
+                    }}
+                  >
+                    View
+                  </Link>
+                </div>
+              </div>
+              <div className="new-item-collection img-zoom-container">
+                <Link to={`/${type}`}>
+                  <img src={require(`../../assets/thumbnails/${type}-thumbnail.jpg`)} alt="" />
+                </Link>
+                <Link to={`/${type}`} className="hover-underline-animation">
+                  View More
+                </Link>
+              </div>
             </div>
-            <Link to="">View</Link>
-          </div>
-        </div>
-        <div className="new-item-collection">
-          <Link>
-            <img src={shopProfile} alt=""></img>
-          </Link>
-          <Link to="" className="hover-underline-animation">View More</Link>
-        </div>
+          );
+        })}
       </section>
+      {/* <Link
+          
+        > */}
 
       <section id="most-popular">
         <h2>Most Popular</h2>
         {/* add array map loop here!! */}
         <div className="popular-product-container">
-          <ItemCard
-            type={"prints"}
-            name={"Pastel Girl T-Shirt"}
-            price={26}
-            imgSrc={`sunset-print.jpg`}
-          />
-          <ItemCard
-            name={"Pastel Girl T-Shirt"}
-            type={"prints"}
-            price={26}
-            imgSrc={`gojo-print.jpg`}
-          />
-          <ItemCard
-            name={"Pastel Girl T-Shirt"}
-            type={"stationary"}
-            price={26}
-            imgSrc={`strawberry-pouch.jpg`}
-          />
+          {MostPopularProductData.map((product, index) => {
+            const { name, price, description, imgSrc, type, productId } =
+              product;
+            return (
+              <ItemCard
+                type={type}
+                imgSrc={imgSrc}
+                price={price}
+                name={name}
+                productId={productId}
+                description={description}
+                key={index}
+              />
+            );
+          })}
         </div>
       </section>
 

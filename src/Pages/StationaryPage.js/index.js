@@ -2,7 +2,7 @@ import Navbar from "../../Navbar";
 import Footer from "../../Footer";
 import ItemCard from "../../ItemCard";
 import "./StationaryPage.css";
-import ProductData from "../../ProductData";
+import {ProductData} from "../../ProductData";
 
 const StationaryPage = () => {
   const lightPurple = "#CBD3FF";
