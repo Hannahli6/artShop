@@ -20,7 +20,7 @@ function Navbar({backgroundColor}) {
         {links.map((link, index) => {
           return (
             <li className="nav-item" key={index}>
-            <Link to={`/${link.path}`} className="nav-link">{link.name}</Link>
+            <Link to={`/${link.path}`} className="nav-link hover-underline-animation">{link.name}</Link>
             </li>
           );
         })}
