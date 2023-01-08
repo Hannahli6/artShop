@@ -13,9 +13,8 @@ const ProductPage = () => {
   const { name, price, imgSrc, description, type } = productState;
   let reviews = [];
   reviews = ProductReviewsData.find(
-    (reviewType) => (reviewType.type = type)
+    (reviewType) => (reviewType.type === type)
   ).reviews;
-
   return (
     <div>
       <Navbar backgroundColor={lightPurple} />
@@ -48,7 +47,7 @@ const ProductPage = () => {
                 {reviews.map((review, index) => {
                   const { name, star, description } = review;
                   return (
-                    <div className="review-card">
+                    <div className="review-card" key={index}>
                       <div className="review-profile-container">
                         <div className="review-name-container">
                           <div className="review-profile-img"></div>
