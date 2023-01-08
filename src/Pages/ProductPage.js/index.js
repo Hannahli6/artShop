@@ -2,15 +2,20 @@ import "./ProductPage.css";
 import Navbar from "../../Navbar";
 import Footer from "../../Footer";
 import { useLocation, useParams, Link } from "react-router-dom";
-
+import { ProductReviewsData } from "../../ProductData";
 
 const ProductPage = () => {
   const lightPurple = "#CBD3FF";
   const darkerPurple = "#8C85DC";
-  const { productId } = useParams ();
+  const { productId } = useParams();
   const state = useLocation();
-  const productState = state.state
-  const { name, price, imgSrc, description, type } = productState
+  const productState = state.state;
+  const { name, price, imgSrc, description, type } = productState;
+  let reviews = [];
+  reviews = ProductReviewsData.find(
+    (reviewType) => (reviewType.type = type)
+  ).reviews;
+
   return (
     <div>
       <Navbar backgroundColor={lightPurple} />
@@ -24,13 +29,11 @@ const ProductPage = () => {
             <div className="product-desc-container">
               <h2 className="product-name">{name}</h2>
               <h3 className="product-price">${price} CAD</h3>
-              <span className="product-desc">
-                {description}
-              </span>
+              <span className="product-desc">{description}</span>
             </div>
             <div className="product-btn-container">
-              <button>quantity</button>
-              <button>add to cart</button>
+              <button alt="">quantity</button>
+              <button alt="">add to cart</button>
             </div>
             <span className="product-delivery-info">
               Estimated Delivery <br />
@@ -39,60 +42,26 @@ const ProductPage = () => {
             </span>
           </div>
           <div className="review">
-            <div className="review-cards-container">
-              <div className="review-card">
-                <div className="review-profile-container">
-                  <div className="review-name-container">
-                    <div className="review-profile-img"></div>
-                    {/* <img src="" alt=""></img> */}
-                    <span>Hannah Li</span>
-                  </div>
-                  <div className="review-rating">⭐⭐⭐⭐⭐</div>
-                </div>
-                <div>
-                  <span>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer{" "}
-                  </span>
-                </div>
-              </div>
-              <div className="review-card">
-                <div className="review-profile-container">
-                  <div className="review-name-container">
-                    <div className="review-profile-img"></div>
-                    {/* <img src="" alt=""></img> */}
-                    <span>Hannah Li</span>
-                  </div>
-                  <div className="review-rating">⭐⭐⭐⭐⭐</div>
-                </div>
-                <div>
-                  <span>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer{" "}
-                  </span>
-                </div>
-              </div>
-              <div className="review-card">
-                <div className="review-profile-container">
-                  <div className="review-name-container">
-                    <div className="review-profile-img"></div>
-                    {/* <img src="" alt=""></img> */}
-                    <span>Hannah Li</span>
-                  </div>
-                  <div className="review-rating">⭐⭐⭐⭐⭐</div>
-                </div>
-                <div>
-                  <span>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer{" "}
-                  </span>
-                </div>
+            <div>
+              <h3>{reviews.length} reviews: </h3>
+              <div className="review-cards-container">
+                {reviews.map((review, index) => {
+                  const { name, star, description } = review;
+                  return (
+                    <div className="review-card">
+                      <div className="review-profile-container">
+                        <div className="review-name-container">
+                          <div className="review-profile-img"></div>
+                          <span>{name}</span>
+                        </div>
+                        <div className="review-rating">⭐⭐⭐⭐⭐</div>
+                      </div>
+                      <div>
+                        <span>{description}</span>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>

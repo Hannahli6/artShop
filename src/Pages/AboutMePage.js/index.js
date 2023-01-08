@@ -36,7 +36,7 @@ const AboutMePage = () => {
       <section id="about-me">
         <div className="about-me-content">
           <div className="about-me-desc">
-            <h2 >Hello, I’m <h2 className="hover-underline-animation">Hannah</h2>!</h2>
+            <h2 >Hello, I’m <span className="hover-underline-animation">Hannah </span>!</h2>
             <h3 className="hover-underline-animation">Digital Artist</h3>
             <span>
               My name is Hannah and I'm a highschool student. I'm currently

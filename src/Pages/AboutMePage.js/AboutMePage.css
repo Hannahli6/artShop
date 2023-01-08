@@ -10,6 +10,11 @@
 .about-me-desc h2 {
   margin-bottom: 15px;
 }
+.about-me-desc h2 span{
+  font-size: 28px;
+  display: inline;
+  margin: 0;
+}
 .about-me-desc h3 {
   margin-bottom: 40px;
 }
