@@ -2,7 +2,7 @@ import "./ProductPage.css";
 import Navbar from "../../Navbar";
 import Footer from "../../Footer";
 import { useLocation, useParams, Link } from "react-router-dom";
-import { ProductReviewsData } from "../../ProductData";
+import { ProductData, ProductReviewsData } from "../../ProductData";
 
 const ProductPage = () => {
   const lightPurple = "#CBD3FF";
@@ -15,6 +15,9 @@ const ProductPage = () => {
   reviews = ProductReviewsData.find(
     (reviewType) => (reviewType.type === type)
   ).reviews;
+
+    // find product based on productId
+
   return (
     <div>
       <Navbar backgroundColor={lightPurple} />
@@ -36,8 +39,8 @@ const ProductPage = () => {
             </div>
             <span className="product-delivery-info">
               Estimated Delivery <br />
-              Please note this is a preorder product, its estimated delivery is
-              October 2022.
+              Please note this is a small business product, the estimated delivery is
+              Feb 2022.
             </span>
           </div>
           <div className="review">

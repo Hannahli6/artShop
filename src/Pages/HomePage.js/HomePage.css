@@ -45,10 +45,11 @@ section {
   display: flex;
   justify-content: center;
   border-radius: 10px;
-  padding: 20px 30px 20px 20px;
+  padding: 20px 14px 21px 20px;
   margin: 0 auto 25px auto;
   max-width: 700px;
-  height: 330px;
+  min-height: 219px;
+  max-height: 330px;
 }
 .new-item-img-wrapper {
   width: 70%;
@@ -64,6 +65,9 @@ section {
 .new-item-content {
   text-align: left;
   position: relative;
+}
+.new-item-price{
+  font-size: 22px;
 }
 .new-item-content a {
   background-color: #8c85dc;

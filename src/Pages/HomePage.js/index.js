@@ -17,8 +17,7 @@ const HomePage = () => {
           <div className="landing-content-desktop">
             <div className="landing-title">
               <h1>ArtnHannah</h1>
-              <h3>Art Shop</h3>
-              <h3>700+ sales</h3>
+              <h3 className="hover-underline-animation">Art Shop</h3>
             </div>
             <Link to="collection" className="landing-btn">
               shop now
@@ -29,8 +28,7 @@ const HomePage = () => {
         <div className="landing-content-mobile">
           <div className="landing-title">
             <h1>ArtnHannah</h1>
-            <h3>Art Shop</h3>
-            <h3>700+ sales</h3>
+            <h3 >Art Shop</h3>
           </div>
           <img src={shopProfile} alt="" className="shop-profile-img"></img>
           <Link to="collection" className="landing-btn">
@@ -41,7 +39,7 @@ const HomePage = () => {
 
       <section id="newest">
         <h2>Newest</h2>
-        {NewestProductData.map((product,index) => {
+        {NewestProductData.map((product, index) => {
           const { name, price, description, imgSrc, type, productId } = product;
           return (
             <div key={index}>
@@ -62,7 +60,7 @@ const HomePage = () => {
                 <div className="new-item-content">
                   <div>
                     <h3>{name}</h3>
-                    <span>$ {price} CAD</span>
+                    <h3 className="new-item-price">${price} CAD</h3>
                   </div>
                   <Link
                     to={{ pathname: `/collection/${productId}` }}
@@ -80,10 +78,13 @@ const HomePage = () => {
               </div>
               <div className="new-item-collection img-zoom-container">
                 <Link to={`/${type}`}>
-                  <img src={require(`../../assets/thumbnails/${type}-thumbnail.jpg`)} alt="" />
+                  <img
+                    src={require(`../../assets/thumbnails/${type}-thumbnail.jpg`)}
+                    alt=""
+                  />
                 </Link>
                 <Link to={`/${type}`} className="hover-underline-animation">
-                  {type} 
+                  {type}
                 </Link>
               </div>
             </div>
