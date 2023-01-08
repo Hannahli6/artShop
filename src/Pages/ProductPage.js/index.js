@@ -3,11 +3,13 @@ import Navbar from "../../Navbar";
 import Footer from "../../Footer";
 import { useParams, Link } from "react-router-dom";
 import { ProductData, ProductReviewsData } from "../../ProductData";
+import { useState } from "react";
 
 const ProductPage = () => {
   const lightPurple = "#CBD3FF";
   const darkerPurple = "#8C85DC";
   const { productId } = useParams();
+  const [quantity, setQuantity] = useState(1);
 
   // collect all products into one array
   let allProducts = [];
@@ -18,7 +20,7 @@ const ProductPage = () => {
     });
     allProducts = [...allProducts, ...typeProduct.products];
   });
-  
+
   // find product based on productId
   const product = allProducts.find(
     (product) => product.productId === productId
@@ -45,8 +47,17 @@ const ProductPage = () => {
               <span className="product-desc">{description}</span>
             </div>
             <div className="product-btn-container">
-              <button alt="">quantity</button>
-              <button alt="">add to cart</button>
+              <span className="quantity-label">quantity</span>
+              <div className="quantity-counter">
+                <button alt="" onClick={() => quantity> 1 ? setQuantity(quantity - 1) : null}>
+                  -
+                </button>
+                <span>{quantity}</span>
+                <button alt="" onClick={() => quantity>= 1 ? setQuantity(quantity + 1) : null}>
+                  +
+                </button>
+              </div>
+              <button className="add-to-cart-btn">add to cart</button>
             </div>
             <span className="product-delivery-info">
               Estimated Delivery <br />

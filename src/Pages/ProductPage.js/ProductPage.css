@@ -39,13 +39,30 @@ section {
   width: 100%;
   margin-bottom: 25px;
 }
-.product-btn-container button {
+.quantity-label{
+  text-align: left;
+    margin-bottom: 10px;
+}
+.add-to-cart-btn{
+  cursor: pointer;
+  transition: all .3s ease;
+}
+.add-to-cart-btn:hover{
+  transform: scale(1.01);
+}
+.add-to-cart-btn, .quantity-counter{
   border: solid #574f85 2px;
   background-color: transparent;
-  padding: 16px 100px;
+  padding: 12px;
   white-space: nowrap;
   border-radius: 5px;
   margin-bottom: 11px;
+}
+.quantity-counter button{
+  font-size: 24px;
+  background-color: transparent;
+  padding: 0 40px;
+  cursor: pointer;
 }
 .product-delivery-info {
   display: block;
@@ -58,13 +75,12 @@ section {
   justify-content: center;
   margin-top: 50px;
 }
-.review h3{
+.review h3 {
   text-align: left;
 }
 .review-cards-container {
   max-height: 480px;
   overflow-y: scroll;
-
 }
 .review-card {
   margin-top: 36px;
@@ -115,7 +131,7 @@ section {
   .product-btn-container {
     margin-bottom: 50px;
   }
-  .product-btn-container button {
+  .add-to-cart-btn, .quantity-counter {
     width: 70%;
   }
   .review {
