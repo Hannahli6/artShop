@@ -2,14 +2,14 @@ import Navbar from "../../Navbar";
 import Footer from "../../Footer";
 import ItemCard from "../../ItemCard";
 import "./PrintsPage.css";
-import {ProductData} from "../../ProductData";
+import { ProductData } from "../../ProductData";
 
 const PrintsPage = () => {
   const lightPurple = "#CBD3FF";
   const darkerPurple = "#8C85DC";
   const products = ProductData.find((obj) => obj.type === "prints").products;
   const type = ProductData.find((obj) => obj.type === "prints").type;
-  
+
   return (
     <div>
       <Navbar backgroundColor={lightPurple} />
@@ -17,7 +17,7 @@ const PrintsPage = () => {
         <h2>Prints</h2>
         <div className="prints-container">
           {products.map((product, index) => {
-            const {name, price, imgSrc, productId, description} = product;
+            const { name, price, imgSrc, productId } = product;
             return (
               <ItemCard
                 type={type}
@@ -26,7 +26,6 @@ const PrintsPage = () => {
                 price={price}
                 name={name}
                 productId={productId}
-                description={description}
                 key={index}
               />
             );

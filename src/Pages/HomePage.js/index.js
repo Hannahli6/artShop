@@ -28,7 +28,7 @@ const HomePage = () => {
         <div className="landing-content-mobile">
           <div className="landing-title">
             <h1>ArtnHannah</h1>
-            <h3 >Art Shop</h3>
+            <h3>Art Shop</h3>
           </div>
           <img src={shopProfile} alt="" className="shop-profile-img"></img>
           <Link to="collection" className="landing-btn">
@@ -40,19 +40,12 @@ const HomePage = () => {
       <section id="newest">
         <h2>Newest</h2>
         {NewestProductData.map((product, index) => {
-          const { name, price, description, imgSrc, type, productId } = product;
+          const { name, price, imgSrc, type, productId } = product;
           return (
             <div key={index}>
               <div className="new-item">
                 <Link
-                  to={{ pathname: `/collection/${productId}` }}
-                  state={{
-                    name: name,
-                    price: price,
-                    imgSrc: imgSrc,
-                    description: description,
-                    type: type,
-                  }}
+                  to={`/collection/${productId}`}
                   className="new-item-img-wrapper img-zoom-container"
                 >
                   <img src={require(`../../assets/${type}/${imgSrc}`)} alt="" />
@@ -62,18 +55,7 @@ const HomePage = () => {
                     <h3>{name}</h3>
                     <h3 className="new-item-price">${price} CAD</h3>
                   </div>
-                  <Link
-                    to={{ pathname: `/collection/${productId}` }}
-                    state={{
-                      name: name,
-                      price: price,
-                      imgSrc: imgSrc,
-                      description: description,
-                      type: type,
-                    }}
-                  >
-                    View
-                  </Link>
+                  <Link to={`/collection/${productId}`}>View</Link>
                 </div>
               </div>
               <div className="new-item-collection img-zoom-container">
@@ -91,17 +73,12 @@ const HomePage = () => {
           );
         })}
       </section>
-      {/* <Link
-          
-        > */}
 
       <section id="most-popular">
         <h2>Most Popular</h2>
-        {/* add array map loop here!! */}
         <div className="popular-product-container">
           {MostPopularProductData.map((product, index) => {
-            const { name, price, description, imgSrc, type, productId } =
-              product;
+            const { name, price, imgSrc, type, productId } = product;
             return (
               <ItemCard
                 type={type}
@@ -109,7 +86,6 @@ const HomePage = () => {
                 price={price}
                 name={name}
                 productId={productId}
-                description={description}
                 key={index}
               />
             );

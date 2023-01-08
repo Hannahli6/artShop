@@ -1,22 +1,33 @@
 import "./ProductPage.css";
 import Navbar from "../../Navbar";
 import Footer from "../../Footer";
-import { useLocation, useParams, Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { ProductData, ProductReviewsData } from "../../ProductData";
 
 const ProductPage = () => {
   const lightPurple = "#CBD3FF";
   const darkerPurple = "#8C85DC";
   const { productId } = useParams();
-  const state = useLocation();
-  const productState = state.state;
-  const { name, price, imgSrc, description, type } = productState;
+
+  // collect all products into one array
+  let allProducts = [];
+  ProductData.map((typeProduct) => {
+    let type = typeProduct.type;
+    typeProduct.products.forEach((product) => {
+      product.type = type;
+    });
+    allProducts = [...allProducts, ...typeProduct.products];
+  });
+  
+  // find product based on productId
+  const product = allProducts.find(
+    (product) => product.productId === productId
+  );
+  const { name, price, imgSrc, description, type } = product;
   let reviews = [];
   reviews = ProductReviewsData.find(
-    (reviewType) => (reviewType.type === type)
+    (reviewType) => reviewType.type === type
   ).reviews;
-
-    // find product based on productId
 
   return (
     <div>
@@ -39,8 +50,8 @@ const ProductPage = () => {
             </div>
             <span className="product-delivery-info">
               Estimated Delivery <br />
-              Please note this is a small business product, the estimated delivery is
-              Feb 2022.
+              Please note this is a small business product, the estimated
+              delivery is Feb 2022.
             </span>
           </div>
           <div className="review">

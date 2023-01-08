@@ -24,7 +24,7 @@ const AllProductPage = () => {
         <h2>All</h2>
         <div className="prints-container">
           {allProducts.map((product, index) => {
-            const { name, price, imgSrc, productId, description, type } =
+            const { name, price, imgSrc, productId, type } =
               product;
             return (
               <ItemCard
@@ -34,7 +34,6 @@ const AllProductPage = () => {
                 price={price}
                 name={name}
                 productId={productId}
-                description={description}
                 key={index}
               />
             );
