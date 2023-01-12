@@ -62,7 +62,7 @@ const ProductPage = () => {
             <span className="product-delivery-info">
               Estimated Delivery <br />
               Please note this is a small business product, the estimated
-              delivery is Feb 2022.
+              delivery is Feb 2023.
             </span>
           </div>
           <div className="review">
