@@ -1,0 +1,18 @@
+.coming-soon h1{
+  font-size: 45px;
+  margin-bottom: 40px;
+  display: inline;
+}
+.coming-soon img{
+  width: 300px;
+  transition: 0.5 ease;
+}
+.coming-soon img:hover{
+  transform: scale(1.02);
+}
+.coming-soon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

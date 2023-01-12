@@ -9,7 +9,8 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.8rem 2.2rem;
+  padding: 1.8rem 4rem;
+  /* padding: 1.8rem 2.2rem; */
   background-color: white;
   
 }
@@ -45,8 +46,13 @@ li {
 .nav-link:hover {
   color: #2a2257;
 }
-
+.nav-logo img{
+  width: 25px;
+}
 @media only screen and (max-width: 768px) {
+  .navbar{
+      padding: 1.8rem 2.2rem;
+  }
   .nav-menu {
     position: absolute;
     left: -100%;
@@ -58,6 +64,7 @@ li {
     text-align: center;
     transition: 0.3s;
     box-shadow: 0 15px 27px rgba(0, 0, 0, 0.05);
+    z-index: 1;
   }
 
   .nav-menu.active {

@@ -9,6 +9,7 @@ import StationaryPage from "./Pages/StationaryPage.js";
 import AccessoriesPage from "./Pages/AccessoriesPage.js";
 import AllProductPage from "./Pages/AllProductPage.js";
 import ScrollToTop from "./ScrollToTop";
+import CartPage from "./Pages/CartPage.js/CartPage";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path="all-item" element={<AllProductPage />} />
         <Route path="collection" element={<CollectionPage />} />
         <Route path="collection/:productId" element={<ProductPage />} />
-
+        <Route path="cart" element={<CartPage />} />
         <Route path="about-me" element={<AboutMePage />} />
         <Route path="/" element={<HomePage />} />
       </Routes>
